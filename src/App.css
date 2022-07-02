@@ -1,0 +1,30 @@
+.App {
+    padding:  2rem;
+}
+.margin-bottom{
+  margin-bottom: 2rem;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.button{
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 0.2rem 1rem;
+  font-size: 14px;
+  border-radius: 5px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+}
+
+
+
+
