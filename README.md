@@ -1,4 +1,4 @@
-# React Aryan Table
+# React Seperated Inputs
 
 #### A simple React Seperated Inputs for all cases
 
