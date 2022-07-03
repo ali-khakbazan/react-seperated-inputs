@@ -6,7 +6,7 @@ a simple and reusable component of seperated inputs that you can controll every 
 
 ## Demo
 
-https://codesandbox.io/s/react-aryan-table-t4lghw
+https://codesandbox.io/s/react-seperated-inputs-woccke
 
 ## Usage
 
@@ -59,27 +59,19 @@ export default App;
 
 | Parameter          | Type                                       | Required | Description                                                                   |
 | :----------------- | :----------------------------------------- | :------- | :---------------------------------------------------------------------------- |
-| `rtl`              | `boolean`                                  | **NO**   | set direction to rtl                                                          |
-| `columns`          | `TableColumns`                             | **YES**  | columns of the table                                                          |
-| `data`             | `TableData`                                | **YES**  | body of the table                                                             |
-| `paginationProps`  | `ReactPaginateProps`                       | **NO**   | a function that takes default styles and returns {...styles, your new styles} |
-| `isLoading`        | `boolean`                                  | **NO**   | toggle between the table loading overlay and the main table ui                |
-| `wrapperStyles`    | `(styles: CSSProperties) => CSSProperties` | **NO**   | a function that takes default styles and returns {...styles, your new styles} |
-| `tableStyles`      | `(styles: CSSProperties) => CSSProperties` | **NO**   | a function that takes default styles and returns {...styles, your new styles} |
-| `headerRowStyles`  | `(styles: CSSProperties) => CSSProperties` | **NO**   | a function that takes default styles and returns {...styles, your new styles} |
-| `headerCellStyles` | `(styles: CSSProperties) => CSSProperties` | **NO**   | a function that takes default styles and returns {...styles, your new styles} |
-| `bodyRowStyles`    | `(styles: CSSProperties) => CSSProperties` | **NO**   | a function that takes default styles and returns {...styles, your new styles} |
-| `bodyCellStyles`   | `(styles: CSSProperties) => CSSProperties` | **NO**   | a function that takes default styles and returns {...styles, your new styles} |
-
-## API Reference (`useFilters hook`)
-
-| Parameter | Type    | Required | Description                     |
-| :-------- | :------ | :------- | :------------------------------ |
-| `items`   | `any[]` | **YES**  | for creating a filterable array |
+| `values`           | `string[]`                                 | **YES**  | value of each input                                                           |
+| `setValues`        | `Dispatch<SetStateAction<string[]>>`       | **YES**  | set values of inputs                                                          |
+| `keyProp`          | `string`                                   | **YES**  | a unique key for list of inputs                                               |
+| `length`           | `number`                                   | **YES**  | number of inputs                                                              |
+| `valueLength`      | `number[] (or) number`                     | **YES**  | maximum value length of each input                                            |
+| `inputWidths`      | `string[] (or) 'auto'`                     | **NO**   | width of each input                                                           |
+| `inputStyle`       | `(styles: CSSProperties) => CSSProperties` | **NO**   | a function that takes default styles and returns {...styles, your new styles} |
+| `labelStyle`       | `(styles: CSSProperties) => CSSProperties` | **NO**   | a function that takes default styles and returns {...styles, your new styles} |
+| `wrapperClassName` | `string'`                                  | **NO**   | wrapper classname                                                             |
+| `label`            | `string (or) ReactNode`                    | **NO**   | inputs label                                                                  |
+| `inputWidths`      | `string[] (or) 'auto'`                     | **NO**   | width of each input                                                           |
 
 ## Installation
-
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -94,28 +86,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
