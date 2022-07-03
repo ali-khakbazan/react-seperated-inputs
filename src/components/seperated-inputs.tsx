@@ -14,16 +14,16 @@ import {
 import { onlyNumber } from "../utils/onlyNumber";
 
 type Props = {
+  keyProp: string;
+  values: string[];
+  setValues: Dispatch<SetStateAction<string[]>>;
+  length: number;
+  valueLength: number[] | number;
+  inputWidths?: string[] | "auto";
   wrapperClassName?: string;
   inputClassname?: string;
   label?: string | ReactNode;
-  keyProp: string;
-  length: number;
-  inputWidths?: string[] | "auto";
-  valueLength: number[] | number;
   direction?: "rtl" | "ltr";
-  values: string[];
-  setValues: Dispatch<SetStateAction<string[]>>;
   labelStyle?: (styles: CSSProperties) => CSSProperties;
   inputStyle?: (styles: CSSProperties) => CSSProperties;
 };
